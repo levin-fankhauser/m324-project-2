@@ -212,3 +212,4 @@ terraform.rc
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,terraform,node
 
+.idea
