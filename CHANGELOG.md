@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.0.0...v1.1.0) (2025-11-17)
+
+
+### Features
+
+* Configure eslint with prettier and create github lint workflow ([#43](https://github.com/levin-fankhauser/m324-project-2/issues/43)) ([#46](https://github.com/levin-fankhauser/m324-project-2/issues/46)) ([63e08e4](https://github.com/levin-fankhauser/m324-project-2/commit/63e08e4e0d884822efe38feff7492abdb6ce9bd1))
+
 ## 1.0.0 (2025-11-10)
 
 
