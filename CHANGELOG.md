@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.1.0...v1.2.0) (2025-11-17)
+
+
+### Features
+
+* landing page with shadcn components (Landing Page [#28](https://github.com/levin-fankhauser/m324-project-2/issues/28)) ([#54](https://github.com/levin-fankhauser/m324-project-2/issues/54)) ([dc57939](https://github.com/levin-fankhauser/m324-project-2/commit/dc5793967bd2c86c4a736c9d7ebc0bf4881f65e5))
+
 ## [1.1.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.0.0...v1.1.0) (2025-11-17)
 
 
