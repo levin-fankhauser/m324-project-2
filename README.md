@@ -18,3 +18,31 @@ Unsere Drawing App ist die perfekte Lösung für alle, die unkompliziert und int
 - TailwindCSS
 - Tldraw
 - AWS
+
+
+## Lokale Entwicklung
+
+Das Projekt kann lokal geklont werden. Die Dateien welche zur entwicklung relevant sind, befinden sich im ./app Order befinden. 
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+### Getting Started
+
+Anschliessend, muss der entwicklungs Server gestartet werden:
+
+```bash
+npm run dev
+# oder
+yarn dev
+# oder
+pnpm dev
+# oder
+bun dev
+```
+
+Öffnen sie [http://localhost:3000](http://localhost:3000) mit dem Browser um das Resultat zu sehen.
+
+Dieses Projekt verwendet [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) um automatisch eine neue font family von Vercel, [Geist](https://vercel.com/font), zu laden und optimisieren.
+
+
+
