@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.3.0...v1.4.0) (2025-11-24)
+
+
+### Features
+
+* Added new test worklflow ([#65](https://github.com/levin-fankhauser/m324-project-2/issues/65)) ([#66](https://github.com/levin-fankhauser/m324-project-2/issues/66)) ([bb3b0db](https://github.com/levin-fankhauser/m324-project-2/commit/bb3b0dbbba5b27216e2f0a20691b5c8b851f9e12))
+
 ## [1.3.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.2.0...v1.3.0) (2025-11-24)
 
 
