@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.2.0...v1.3.0) (2025-11-24)
+
+
+### Features
+
+* Init vittest with config and example ([#62](https://github.com/levin-fankhauser/m324-project-2/issues/62)) ([#63](https://github.com/levin-fankhauser/m324-project-2/issues/63)) ([e28cc1c](https://github.com/levin-fankhauser/m324-project-2/commit/e28cc1ca9539358b93757a2ef27336036cfd2a8e))
+
 ## [1.2.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.1.0...v1.2.0) (2025-11-17)
 
 
