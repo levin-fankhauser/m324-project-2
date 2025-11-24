@@ -1,0 +1,25 @@
+name: e2e
+on:
+  push:
+    paths:
+      - app/**
+      - cypress/**
+      - .github/workflows/e2e.yml
+jobs:
+  e2e:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22 # lts
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - name: Install dependencies
+        working-directory: app
+        run: npm ci
+      - name: Run Cypress E2E suite
+        working-directory: app
+        run: npm run test:e2e:ci
