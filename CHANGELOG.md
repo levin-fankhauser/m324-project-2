@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.7.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.6.0...v1.7.0) (2025-12-01)
+
+
+### Features
+
+* run docker with standalone build ([#75](https://github.com/levin-fankhauser/m324-project-2/issues/75)) ([#79](https://github.com/levin-fankhauser/m324-project-2/issues/79)) ([3b4f2d0](https://github.com/levin-fankhauser/m324-project-2/commit/3b4f2d0b83df4868275ae5a4be76a4c9f4cd6eb3))
+
+## [1.6.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.5.1...v1.6.0) (2025-12-01)
+
+
+### Features
+
+* Init docker ([#75](https://github.com/levin-fankhauser/m324-project-2/issues/75)) ([#76](https://github.com/levin-fankhauser/m324-project-2/issues/76)) ([fe38146](https://github.com/levin-fankhauser/m324-project-2/commit/fe381469988ad6226a55d05b8849af0fe64dcf9a))
+
+## [1.5.1](https://github.com/levin-fankhauser/m324-project-2/compare/v1.5.0...v1.5.1) (2025-12-01)
+
+
+### Bug Fixes
+
+* add .wireit folder to .gitignore ([#72](https://github.com/levin-fankhauser/m324-project-2/issues/72)) ([#73](https://github.com/levin-fankhauser/m324-project-2/issues/73)) ([48403c9](https://github.com/levin-fankhauser/m324-project-2/commit/48403c9db37b078fef690426bc15db5a13d870e8))
+
 ## [1.5.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.4.0...v1.5.0) (2025-12-01)
 
 
