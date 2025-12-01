@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.4.0...v1.5.0) (2025-12-01)
+
+
+### Features
+
+* Initialize cypress with wireit ([#68](https://github.com/levin-fankhauser/m324-project-2/issues/68)) ([#69](https://github.com/levin-fankhauser/m324-project-2/issues/69)) ([cc7a779](https://github.com/levin-fankhauser/m324-project-2/commit/cc7a779b28062e266f9f3d1fd2f4ca026fad1f2b))
+
 ## [1.4.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.3.0...v1.4.0) (2025-11-24)
 
 
