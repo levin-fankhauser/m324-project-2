@@ -1,5 +1,7 @@
 FROM node:lts-slim AS builder
 
+ENV NODE_ENV=production
+
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
@@ -9,16 +11,17 @@ RUN npm run build
 
 FROM node:lts-slim
 
+ENV NODE_ENV=production
+
 LABEL service="sketchly"
 
 WORKDIR /app
 
+COPY --from=builder --chown=node:node /app/public /app/public
+COPY --from=builder --chown=node:node /app/.next/standalone /app/
+COPY --from=builder --chown=node:node /app/.next/static ./.next/static
+
 ENV PORT=80
 EXPOSE 80
 
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/node_modules ./node_modules
-
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
