@@ -27,7 +27,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-wrap gap-4 mb-16">
-          <Link href="#draw" className="w-full sm:w-auto">
+          <Link href="/draw" className="w-full sm:w-auto">
             <Button
               size="lg"
               className="bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-100 dark:hover:bg-neutral-200 text-white dark:text-neutral-900 px-8 py-6 text-base font-medium"
