@@ -1,8 +1,7 @@
-'use client';
+"use client";
 import { Button } from "@/components/ui/button";
-import { Pencil } from 'lucide-react';
+import { Pencil } from "lucide-react";
 import Link from "next/link";
-
 
 export default function Home() {
   return (
@@ -17,12 +16,14 @@ export default function Home() {
 
         <div className="space-y-6 mb-12">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-            Eine unendliche Leinwand<br />
+            Eine unendliche Leinwand
+            <br />
             für deine Gedanken
           </h1>
 
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
-            Zeichne, skizziere oder erstelle Diagramme ohne Grenzen. Keine Anmeldung erforderlich.
+            Zeichne, skizziere oder erstelle Diagramme ohne Grenzen. Keine
+            Anmeldung erforderlich.
           </p>
         </div>
 
@@ -36,7 +37,6 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-
       </div>
     </div>
   );
