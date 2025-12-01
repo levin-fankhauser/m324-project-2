@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.7.0...v1.8.0) (2025-12-01)
+
+
+### Features
+
+* navbar implementation (Hauptnavigation und Layout erstellen [#29](https://github.com/levin-fankhauser/m324-project-2/issues/29)) ([#81](https://github.com/levin-fankhauser/m324-project-2/issues/81)) ([bf53e2b](https://github.com/levin-fankhauser/m324-project-2/commit/bf53e2b7ae776a9c01e69289cdb43a010451bee0))
+
 ## [1.7.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.6.0...v1.7.0) (2025-12-01)
 
 
