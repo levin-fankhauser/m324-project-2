@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.5.1...v1.6.0) (2025-12-01)
+
+
+### Features
+
+* Init docker ([#75](https://github.com/levin-fankhauser/m324-project-2/issues/75)) ([#76](https://github.com/levin-fankhauser/m324-project-2/issues/76)) ([fe38146](https://github.com/levin-fankhauser/m324-project-2/commit/fe381469988ad6226a55d05b8849af0fe64dcf9a))
+
 ## [1.5.1](https://github.com/levin-fankhauser/m324-project-2/compare/v1.5.0...v1.5.1) (2025-12-01)
 
 
