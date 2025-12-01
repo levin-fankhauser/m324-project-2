@@ -1,0 +1,7 @@
+services:
+  sketchly:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
