@@ -1,0 +1,1 @@
+{"fullyTracked":false,"platform":"win32","arch":"x64","nodeVersion":"v22.18.0","command":"cypress run","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{"[\"C:\\\\Dev\\\\m-324\\\\m324-project-2\\\\app\",\"prepare\"]":"3f66b3edd3278911bd310c7cd00f7775f5e26a3eee7c8bc5d31d890ec2e3d741"},"env":{}}
