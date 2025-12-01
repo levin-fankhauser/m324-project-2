@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/levin-fankhauser/m324-project-2/compare/v1.5.0...v1.5.1) (2025-12-01)
+
+
+### Bug Fixes
+
+* add .wireit folder to .gitignore ([#72](https://github.com/levin-fankhauser/m324-project-2/issues/72)) ([#73](https://github.com/levin-fankhauser/m324-project-2/issues/73)) ([48403c9](https://github.com/levin-fankhauser/m324-project-2/commit/48403c9db37b078fef690426bc15db5a13d870e8))
+
 ## [1.5.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.4.0...v1.5.0) (2025-12-01)
 
 
