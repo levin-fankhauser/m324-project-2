@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1](https://github.com/levin-fankhauser/m324-project-2/compare/v1.12.0...v1.12.1) (2025-12-08)
+
+
+### Bug Fixes
+
+* Rename all occurrences of myapp to sketchly ([#92](https://github.com/levin-fankhauser/m324-project-2/issues/92)) ([#95](https://github.com/levin-fankhauser/m324-project-2/issues/95)) ([dab0cc7](https://github.com/levin-fankhauser/m324-project-2/commit/dab0cc749b32869266bfb7068663d49d9b45228b))
+
 ## [1.12.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.11.0...v1.12.0) (2025-12-08)
 
 
