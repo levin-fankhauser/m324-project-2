@@ -2,10 +2,10 @@
 # Name der Applikation
 # WARNING: muss gleich sein zum Label "service" des zu deployende Dockerfile
 #          siehe: `../../app/Dockerfile`
-service: myapp
+service: sketchly
 
 # Name vom Container-Image
-image: m324/myapp
+image: m324/sketchly
 
 # Auf diesen Server deployen
 # INFO: Wir verwenden die öffentliche IP der AWS-VM via CI-Pipeline

@@ -94,20 +94,3 @@ jobs:
         run: |
           # Ensures that all Servers have docker installed
           bundle exec kamal server bootstrap
-
-      # INFO: Uncomment to add mysql to the server
-      #       Also add all envs defiend in the deploy.yml as GitHub Environment vars.
-      # - name: Boot Mysql
-      #   working-directory: kamal
-      #   env:
-      #     KAMAL_SERVER_IP: ${{ env.SERVER_IP }}
-      #     KAMAL_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-      #     KAMAL_REGISTRY_PASSWORD: ${{ steps.login-ecr.outputs[format('docker_password_{0}_dkr_ecr_us_east_1_amazonaws_com', secrets.AWS_ACCOUNT_ID)] }}
-      #   run: |
-      #     if [ $(bundle exec kamal accessory details mysql | grep -c "Accessory mysql") -eq 1 ]
-      #     then
-      #       echo "Mysql already booted."
-      #       bundle exec kamal accessory restart mysql
-      #     else
-      #       bundle exec kamal accessory boot mysql
-      #     fi
