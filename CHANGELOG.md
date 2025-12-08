@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.10.0...v1.11.0) (2025-12-08)
+
+
+### Features
+
+* Initialize Kamal ([#89](https://github.com/levin-fankhauser/m324-project-2/issues/89)) ([#90](https://github.com/levin-fankhauser/m324-project-2/issues/90)) ([42ebfbe](https://github.com/levin-fankhauser/m324-project-2/commit/42ebfbe65734997cde5cbbc58fb1dcf8d7d576f7))
+
 ## [1.10.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.9.0...v1.10.0) (2025-12-08)
 
 
