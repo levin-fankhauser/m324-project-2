@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.8.0...v1.9.0) (2025-12-08)
+
+
+### Features
+
+* Implement tldraw component ([#83](https://github.com/levin-fankhauser/m324-project-2/issues/83)) ([#84](https://github.com/levin-fankhauser/m324-project-2/issues/84)) ([267d099](https://github.com/levin-fankhauser/m324-project-2/commit/267d099a2aa3480a8415b0c60205771ff487d7ff))
+
 ## [1.8.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.7.0...v1.8.0) (2025-12-01)
 
 
