@@ -15,7 +15,7 @@ const navItems = [
     Icon: HomeAlt1Icon,
   },
   {
-    href: "/#draw",
+    href: "/draw",
     label: "New Canvas",
     Icon: AkarPencilIcon,
   },
@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <aside
-      className={`fixed left-0 top-0 flex h-screen flex-col border-r
+      className={`z-999 fixed left-0 top-0 flex h-screen flex-col border-r
       bg-white/90 border-zinc-200
       dark:bg-black/95 dark:border-zinc-800
       py-8 transition-all duration-300
