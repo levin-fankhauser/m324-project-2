@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.9.0...v1.10.0) (2025-12-08)
+
+
+### Features
+
+* Initialized terraform to work with AWS ([#86](https://github.com/levin-fankhauser/m324-project-2/issues/86)) ([#87](https://github.com/levin-fankhauser/m324-project-2/issues/87)) ([b6dd21e](https://github.com/levin-fankhauser/m324-project-2/commit/b6dd21ed611018c11403c70175e7a319ba79aee1))
+
 ## [1.9.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.8.0...v1.9.0) (2025-12-08)
 
 
