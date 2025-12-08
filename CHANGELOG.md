@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.11.0...v1.12.0) (2025-12-08)
+
+
+### Features
+
+* Initialize deployment ([#92](https://github.com/levin-fankhauser/m324-project-2/issues/92)) ([#93](https://github.com/levin-fankhauser/m324-project-2/issues/93)) ([9bb227b](https://github.com/levin-fankhauser/m324-project-2/commit/9bb227b58269b7a6f60a63d0948995f1b1bc0866))
+
 ## [1.11.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.10.0...v1.11.0) (2025-12-08)
 
 
