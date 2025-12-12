@@ -4,24 +4,30 @@ import { PencilLine } from "lucide-react";
 import { useEffect, useState } from "react";
 
 type Drawing = {
+  id: string;
   title: string;
 };
 
 // Will be replaced with real data in issue #23
 const INITIAL_DRAWINGS: Drawing[] = [
   {
+    id: "1",
     title: "Drawing 1",
   },
   {
+    id: "2",
     title: "Drawing 2",
   },
   {
+    id: "3",
     title: "Drawing 3",
   },
   {
+    id: "4",
     title: "Drawing 4",
   },
   {
+    id: "5",
     title: "Drawing 5",
   },
 ];
@@ -62,7 +68,7 @@ export default function OverviewPage() {
               <div
                 className="rounded-lg border-2 p-2"
                 data-testid="overview-card"
-                key={drawing.title}
+                key={drawing.id}
               >
                 {drawing.title}
               </div>

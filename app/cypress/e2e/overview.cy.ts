@@ -8,7 +8,6 @@ describe('Overview Page', () => {
 
   it('renders stored drawings once the mock data loads', () => {
     cy.visit(OVERVIEW_URL);
-    cy.wait(500);
     cy.get('[data-testid="overview-card"]').should('have.length', 5);
     cy.contains('Drawing 1').should('be.visible');
     cy.get('[data-testid="overview-skeleton"]').should('not.exist');
