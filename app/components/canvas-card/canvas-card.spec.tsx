@@ -15,7 +15,10 @@ const buildDrawing = (overrides: Partial<Drawing> = {}): Drawing => ({
 const formatDate = (date: Date) =>
   date.toLocaleDateString("de-CH") +
   ", " +
-  date.toLocaleTimeString("de-CH").slice(0, 5);
+  date.toLocaleTimeString("de-CH", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
 describe("CanvasCard", () => {
   afterEach(() => {
@@ -35,6 +38,16 @@ describe("CanvasCard", () => {
 
   it("falls back to the default name when the title is empty", () => {
     const drawing = buildDrawing({ title: "   " });
+
+    render(<CanvasCard drawing={drawing} />);
+
+    const fallback = screen.getByText("Unbenannte Zeichnung");
+
+    expect(fallback).toBeDefined();
+  });
+
+  it("falls back to the default name when the title is missing", () => {
+    const drawing = buildDrawing({ title: undefined });
 
     render(<CanvasCard drawing={drawing} />);
 

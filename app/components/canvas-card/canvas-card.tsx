@@ -15,7 +15,10 @@ export default function CanvasCard({ drawing, className }: CanvasCardProps) {
   const formattedDate =
     primaryDate.toLocaleDateString("de-CH") +
     ", " +
-    primaryDate.toLocaleTimeString("de-CH").slice(0, 5);
+    primaryDate.toLocaleTimeString("de-CH", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
 
   return (
     <article
@@ -37,7 +40,7 @@ export default function CanvasCard({ drawing, className }: CanvasCardProps) {
       <div className="mt-8 space-y-2">
         <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
           <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-neutral-600 dark:border-neutral-700 dark:text-neutral-300">
-            <CalendarClock className="size-4" aria-hidden />
+            <CalendarClock className="size-4" />
             {metaLabel}
           </span>
           <span className="font-medium text-neutral-900 dark:text-neutral-100">
