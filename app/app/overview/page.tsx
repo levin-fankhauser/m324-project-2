@@ -2,35 +2,9 @@
 
 import { PencilLine } from "lucide-react";
 import { useEffect, useState } from "react";
+import { INITIAL_DRAWINGS, type Drawing } from "../../lib/types/drawings";
 
-type Drawing = {
-  id: string;
-  title: string;
-};
-
-// Will be replaced with real data in issue #23
-const INITIAL_DRAWINGS: Drawing[] = [
-  {
-    id: "1",
-    title: "Drawing 1",
-  },
-  {
-    id: "2",
-    title: "Drawing 2",
-  },
-  {
-    id: "3",
-    title: "Drawing 3",
-  },
-  {
-    id: "4",
-    title: "Drawing 4",
-  },
-  {
-    id: "5",
-    title: "Drawing 5",
-  },
-];
+const LOADING_DELAY_MS = 350;
 
 export default function OverviewPage() {
   const [drawings, setDrawings] = useState<Drawing[]>([]);
@@ -40,7 +14,7 @@ export default function OverviewPage() {
     const timeout = setTimeout(() => {
       setDrawings(INITIAL_DRAWINGS);
       setIsLoading(false);
-    }, 350);
+    }, LOADING_DELAY_MS);
 
     return () => clearTimeout(timeout);
   }, []);
