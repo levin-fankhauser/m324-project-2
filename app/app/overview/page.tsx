@@ -1,5 +1,6 @@
 "use client";
 
+import CanvasCard from "@/components/canvas-card/canvas-card";
 import { PencilLine } from "lucide-react";
 import { useEffect, useState } from "react";
 import { INITIAL_DRAWINGS, type Drawing } from "../../lib/types/drawings";
@@ -39,13 +40,7 @@ export default function OverviewPage() {
         {!isLoading && hasDrawings && (
           <div className="grid gap-4 sm:grid-cols-2">
             {drawings.map((drawing) => (
-              <div
-                className="rounded-lg border-2 p-2"
-                data-testid="overview-card"
-                key={drawing.id}
-              >
-                {drawing.title}
-              </div>
+              <CanvasCard key={drawing.id} drawing={drawing} />
             ))}
           </div>
         )}
@@ -64,10 +59,10 @@ export default function OverviewPage() {
 function LoadingGrid() {
   return (
     <div className="grid gap-4 sm:grid-cols-2">
-      {Array.from({ length: 4 }).map((_, index) => (
+      {Array.from({ length: 6 }).map((_, index) => (
         <div
           key={`skeleton-${index}`}
-          className="h-40 animate-pulse rounded-2xl border border-dashed border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900/40"
+          className="h-38 animate-pulse rounded-2xl border border-dashed border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900/40"
           data-testid="overview-skeleton"
         />
       ))}

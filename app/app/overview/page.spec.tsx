@@ -25,7 +25,7 @@ describe("OverviewPage", () => {
     expect(
       screen.getByRole("heading", { name: "Gespeicherte Zeichnungen" }),
     ).toBeDefined();
-    expect(screen.getAllByTestId("overview-skeleton")).toHaveLength(4);
+    expect(screen.getAllByTestId("overview-skeleton")).toHaveLength(6);
   });
 
   it("renders drawing cards after the loading delay", async () => {
@@ -35,7 +35,7 @@ describe("OverviewPage", () => {
       vi.advanceTimersByTime(400);
     });
 
-    expect(screen.getByText("Drawing 1")).toBeDefined();
+    expect(screen.getByText("Zeichnung 1")).toBeDefined();
     expect(screen.queryAllByTestId("overview-skeleton")).toHaveLength(0);
   });
 

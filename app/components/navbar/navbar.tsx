@@ -1,16 +1,15 @@
 "use client";
 
-import { SettingsHorizontalIcon } from "@/components/ui/icons/akar-icons-settings-horizontal";
+import { AkarChevronDownIcon } from "@/components/ui/icons/akar-icons-chevron-down";
 import { HomeAlt1Icon } from "@/components/ui/icons/akar-icons-home-alt1";
 import { AkarPencilIcon } from "@/components/ui/icons/akar-icons-pencil";
-import { AkarChevronDownIcon } from "@/components/ui/icons/akar-icons-chevron-down";
-import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const navItems = [
   {
-    href: "/#overview",
+    href: "/overview",
     label: "Overview",
     Icon: HomeAlt1Icon,
   },
@@ -18,11 +17,6 @@ const navItems = [
     href: "/draw",
     label: "New Canvas",
     Icon: AkarPencilIcon,
-  },
-  {
-    href: "/#settings",
-    label: "Settings",
-    Icon: SettingsHorizontalIcon,
   },
 ];
 
@@ -36,7 +30,7 @@ export default function Navbar() {
       bg-white/90 border-zinc-200
       dark:bg-black/95 dark:border-zinc-800
       py-8 transition-all duration-300
-      ${collapsed ? "w-10 px-2" : "w-64 px-6"}`}
+      ${collapsed ? "w-10 px-2" : "w-56 px-6"}`}
     >
       <button
         type="button"
@@ -72,9 +66,7 @@ export default function Navbar() {
 
             <ul className="space-y-1">
               {navItems.map(({ href, label, Icon }) => {
-                const isActive =
-                  pathname === href ||
-                  (pathname === "/" && href === "/overview");
+                const isActive = pathname === href;
 
                 return (
                   <li key={href}>
@@ -86,6 +78,7 @@ export default function Navbar() {
                           ? "text-zinc-900 dark:text-zinc-100 bg-zinc-100/60 dark:bg-zinc-900/60"
                           : "text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
                       }`}
+                      onClick={() => setCollapsed(true)}
                     >
                       <Icon />
                       <span className="relative">
