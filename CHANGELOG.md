@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.12.1...v1.13.0) (2025-12-12)
+
+
+### Features
+
+* Initialize overview page ([#13](https://github.com/levin-fankhauser/m324-project-2/issues/13)) ([#97](https://github.com/levin-fankhauser/m324-project-2/issues/97)) ([f1228a1](https://github.com/levin-fankhauser/m324-project-2/commit/f1228a102f9ed7d9d2831809c5c9479d5fa12f2f))
+
 ## [1.12.1](https://github.com/levin-fankhauser/m324-project-2/compare/v1.12.0...v1.12.1) (2025-12-08)
 
 
