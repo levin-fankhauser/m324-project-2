@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.13.0...v1.14.0) (2025-12-14)
+
+
+### Features
+
+* Implement canvas card ([#16](https://github.com/levin-fankhauser/m324-project-2/issues/16)) ([#99](https://github.com/levin-fankhauser/m324-project-2/issues/99)) ([e34c88e](https://github.com/levin-fankhauser/m324-project-2/commit/e34c88e1475319b91aac4ea32489f48167f99c3b))
+
 ## [1.13.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.12.1...v1.13.0) (2025-12-12)
 
 
