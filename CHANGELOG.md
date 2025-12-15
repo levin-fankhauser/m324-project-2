@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.14.0...v1.15.0) (2025-12-15)
+
+
+### Features
+
+* Implement save canvas functionality ([#9](https://github.com/levin-fankhauser/m324-project-2/issues/9)) ([#101](https://github.com/levin-fankhauser/m324-project-2/issues/101)) ([9d41ae5](https://github.com/levin-fankhauser/m324-project-2/commit/9d41ae5ed008d36b2c997274193982aa999a4888))
+
 ## [1.14.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.13.0...v1.14.0) (2025-12-14)
 
 
