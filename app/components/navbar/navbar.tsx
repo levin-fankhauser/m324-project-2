@@ -3,26 +3,37 @@
 import { AkarChevronDownIcon } from "@/components/ui/icons/akar-icons-chevron-down";
 import { HomeAlt1Icon } from "@/components/ui/icons/akar-icons-home-alt1";
 import { AkarPencilIcon } from "@/components/ui/icons/akar-icons-pencil";
+import { canvasStorageService } from "@/services/canvasStorage.service";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-
-const navItems = [
-  {
-    href: "/overview",
-    label: "Overview",
-    Icon: HomeAlt1Icon,
-  },
-  {
-    href: "/draw",
-    label: "New Canvas",
-    Icon: AkarPencilIcon,
-  },
-];
 
 export default function Navbar() {
   const [collapsed, setCollapsed] = useState(true);
   const pathname = usePathname();
+  const router = useRouter();
+
+  const navItems = [
+    {
+      href: "/overview",
+      label: "Overview",
+      Icon: HomeAlt1Icon,
+    },
+  ];
+
+  const handleCreateCanvas = () => {
+    const id = crypto.randomUUID();
+    const now = new Date();
+
+    canvasStorageService.saveCanvas({
+      id,
+      createdAt: now,
+      updatedAt: now,
+    });
+
+    setCollapsed(true);
+    router.push(`/draw/${id}`);
+  };
 
   return (
     <aside
@@ -91,6 +102,16 @@ export default function Navbar() {
                   </li>
                 );
               })}
+              <li>
+                <button
+                  type="button"
+                  className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
+                  onClick={handleCreateCanvas}
+                >
+                  <AkarPencilIcon />
+                  <span className="relative">New Canvas</span>
+                </button>
+              </li>
             </ul>
           </nav>
 

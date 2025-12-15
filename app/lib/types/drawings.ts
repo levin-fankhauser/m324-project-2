@@ -5,6 +5,11 @@ export type Drawing = {
   updatedAt: Date;
 };
 
+export type PersistedDrawing = Omit<Drawing, 'createdAt' | 'updatedAt'> & {
+  createdAt: string;
+  updatedAt: string;
+};
+
 export const INITIAL_DRAWINGS: Drawing[] = [
   {
     id: '1',
