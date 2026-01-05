@@ -13,7 +13,16 @@ export default function App() {
   return (
     <div className="min-h-screen md:pl-10">
       <div className="h-screen" data-testid="tldraw-editor">
-        {id && typeof id === "string" && <Tldraw persistenceKey={id} />}
+        {id && typeof id === "string" && (
+          <Tldraw
+            persistenceKey={id}
+            onMount={(editor) => {
+              editor.user.updateUserPreferences({
+                colorScheme: "system",
+              });
+            }}
+          />
+        )}
       </div>
     </div>
   );

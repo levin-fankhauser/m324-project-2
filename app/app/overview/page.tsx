@@ -1,19 +1,27 @@
 "use client";
 
 import CanvasCard from "@/components/canvas-card/canvas-card";
+import { DeleteDrawingDialog } from "@/components/overview/delete-drawing-dialog";
+import { EditDrawingDialog } from "@/components/overview/edit-drawing-dialog";
+import { Drawing } from "@/lib/types/drawings";
+import { canvasStorageService } from "@/services/canvasStorage.service";
 import { PencilLine } from "lucide-react";
 import { useEffect, useState } from "react";
-import { INITIAL_DRAWINGS, type Drawing } from "../../lib/types/drawings";
+import { useRouter } from "next/navigation";
 
 const LOADING_DELAY_MS = 350;
 
 export default function OverviewPage() {
   const [drawings, setDrawings] = useState<Drawing[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [editingDrawing, setEditingDrawing] = useState<Drawing | null>(null);
+  const [deletingDrawing, setDeletingDrawing] = useState<Drawing | null>(null);
+  const [titleInput, setTitleInput] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setDrawings(INITIAL_DRAWINGS);
+      setDrawings(canvasStorageService.getAll());
       setIsLoading(false);
     }, LOADING_DELAY_MS);
 
@@ -21,6 +29,39 @@ export default function OverviewPage() {
   }, []);
 
   const hasDrawings = drawings.length > 0;
+
+  const openEditDialog = (drawing: Drawing) => {
+    setEditingDrawing(drawing);
+    setTitleInput((drawing.title ?? "").trim());
+  };
+
+  const closeDialog = () => {
+    setEditingDrawing(null);
+    setTitleInput("");
+  };
+
+  const openDeleteDialog = (drawing: Drawing) => {
+    setDeletingDrawing(drawing);
+  };
+
+  const closeDeleteDialog = () => {
+    setDeletingDrawing(null);
+  };
+
+  const confirmDelete = () => {
+    if (!deletingDrawing) return;
+    canvasStorageService.deleteCanvas(deletingDrawing.id);
+    setDrawings(canvasStorageService.getAll());
+    closeDeleteDialog();
+  };
+
+  const saveTitle = () => {
+    if (!editingDrawing) return;
+    const trimmed = titleInput.trim();
+    canvasStorageService.editTitle(editingDrawing.id, trimmed || null);
+    setDrawings(canvasStorageService.getAll());
+    closeDialog();
+  };
 
   return (
     <div className="min-h-screen px-6 py-12">
@@ -40,7 +81,13 @@ export default function OverviewPage() {
         {!isLoading && hasDrawings && (
           <div className="grid gap-4 sm:grid-cols-2">
             {drawings.map((drawing) => (
-              <CanvasCard key={drawing.id} drawing={drawing} />
+              <CanvasCard
+                key={drawing.id}
+                drawing={drawing}
+                onOpen={(id) => router.push(`/draw/${id}`)}
+                onEdit={(current) => openEditDialog(current)}
+                onDelete={(current) => openDeleteDialog(current)}
+              />
             ))}
           </div>
         )}
@@ -52,6 +99,20 @@ export default function OverviewPage() {
           </div>
         )}
       </div>
+
+      <EditDrawingDialog
+        drawing={editingDrawing}
+        title={titleInput}
+        onTitleChange={(value) => setTitleInput(value)}
+        onClose={closeDialog}
+        onSave={saveTitle}
+      />
+
+      <DeleteDrawingDialog
+        drawing={deletingDrawing}
+        onClose={closeDeleteDialog}
+        onConfirm={confirmDelete}
+      />
     </div>
   );
 }

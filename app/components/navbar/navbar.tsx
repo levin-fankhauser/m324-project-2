@@ -16,7 +16,7 @@ export default function Navbar() {
   const navItems = [
     {
       href: "/overview",
-      label: "Overview",
+      label: "Übersicht",
       Icon: HomeAlt1Icon,
     },
   ];
@@ -95,7 +95,7 @@ export default function Navbar() {
                       <span className="relative">
                         {label}
                         {isActive && (
-                          <span className="absolute left-0 right-0 -bottom-1 h-[2px] rounded-full bg-zinc-900 dark:bg-zinc-100" />
+                          <span className="absolute left-0 right-0 -bottom-1 h-0.5 rounded-full bg-zinc-900 dark:bg-zinc-100" />
                         )}
                       </span>
                     </Link>
@@ -109,7 +109,7 @@ export default function Navbar() {
                   onClick={handleCreateCanvas}
                 >
                   <AkarPencilIcon />
-                  <span className="relative">New Canvas</span>
+                  <span className="relative">Neue Zeichnung</span>
                 </button>
               </li>
             </ul>
