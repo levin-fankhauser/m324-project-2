@@ -50,4 +50,30 @@ export const canvasStorageService = {
     const payload = drawings.map(toPersisted);
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
   },
+
+  deleteCanvas(id: string) {
+    if (!hasBrowserStorage()) return;
+
+    const drawings = readAll();
+    const nextDrawings = drawings.filter((item) => item.id !== id);
+
+    const payload = nextDrawings.map(toPersisted);
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+  },
+
+  editTitle(id: string, title: string | null) {
+    if (!hasBrowserStorage()) return;
+    const drawings = readAll();
+    const index = drawings.findIndex((item) => item.id === id);
+    if (index < 0) return;
+
+    drawings[index] = {
+      ...drawings[index],
+      title,
+      updatedAt: new Date(),
+    };
+
+    const payload = drawings.map(toPersisted);
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+  },
 };

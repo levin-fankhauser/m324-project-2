@@ -1,9 +1,25 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { canvasStorageService } from "@/services/canvasStorage.service";
 import { Pencil } from "lucide-react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleCreateCanvas = () => {
+    const id = crypto.randomUUID();
+    const now = new Date();
+
+    canvasStorageService.saveCanvas({
+      id,
+      createdAt: now,
+      updatedAt: now,
+    });
+
+    router.push(`/draw/${id}`);
+  };
+
   return (
     <div className="min-h-screen px-6 py-12">
       <div className="max-w-4xl mx-auto">
@@ -28,14 +44,14 @@ export default function Home() {
         </div>
 
         <div className="flex flex-wrap gap-4 mb-16">
-          <Link href="/draw" className="w-full sm:w-auto">
-            <Button
-              size="lg"
-              className="bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-100 dark:hover:bg-neutral-200 text-white dark:text-neutral-900 px-8 py-6 text-base font-medium"
-            >
-              Jetzt zeichnen
-            </Button>
-          </Link>
+          <Button
+            type="button"
+            onClick={handleCreateCanvas}
+            size="lg"
+            className="w-full sm:w-auto bg-neutral-900 hover:bg-neutral-800 dark:bg-neutral-100 dark:hover:bg-neutral-200 text-white dark:text-neutral-900 px-8 py-6 text-base font-medium"
+          >
+            Jetzt zeichnen
+          </Button>
         </div>
       </div>
     </div>

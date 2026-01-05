@@ -13,7 +13,7 @@ describe('Home Page', () => {
 
   it('creates a new canvas via the sidebar', () => {
     cy.get('aside button').first().click();
-    cy.contains('New Canvas').click();
+    cy.contains('Neue Zeichnung').click();
     cy.url().should('match', /\/draw\/[a-z0-9-]+$/i);
     cy.get('[data-testid="tldraw-editor"]').should('exist');
   });

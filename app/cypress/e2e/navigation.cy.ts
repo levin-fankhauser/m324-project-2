@@ -6,12 +6,12 @@ const openSidebar = () => {
 
 const navRoutes = [
   {
-    label: 'Overview',
+    label: 'Übersicht',
     urlCheck: () => cy.url().should('include', '/overview'),
     assert: () => cy.contains('Gespeicherte Zeichnungen').should('be.visible'),
   },
   {
-    label: 'New Canvas',
+    label: 'Neue Zeichnung',
     urlCheck: () => cy.url().should('match', /\/draw\/[a-z0-9-]+$/i),
     assert: () => cy.get('[data-testid="tldraw-editor"]').should('exist'),
   },
