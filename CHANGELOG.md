@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.15.0...v1.16.0) (2026-01-05)
+
+
+### Features
+
+* Implement most important features to demonstrate project ([#115](https://github.com/levin-fankhauser/m324-project-2/issues/115)) ([#116](https://github.com/levin-fankhauser/m324-project-2/issues/116)) ([4d53a4d](https://github.com/levin-fankhauser/m324-project-2/commit/4d53a4d8658e76d7919e85ce573ba5b67656d5cb))
+
 ## [1.15.0](https://github.com/levin-fankhauser/m324-project-2/compare/v1.14.0...v1.15.0) (2025-12-15)
 
 
